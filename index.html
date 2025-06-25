@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Juego</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+    }
+    #cuadro {
+      width: 100px;
+      height: 100px;
+      background: red;
+      margin: 50px auto;
+      cursor: pointer;
+    }
+    #mensaje {
+      font-size: 24px;
+      color: green;
+    }
+  </style>
+</head>
+<body>
+  <h1>Haz clic en el cuadrado</h1>
+  <div id="cuadro"></div>
+  <p id="mensaje"></p>
+
+  <script>
+    const cuadro = document.getElementById('cuadro');
+    const mensaje = document.getElementById('mensaje');
+
+    cuadro.addEventListener('click', () => {
+      mensaje.textContent = '¡Ganaste!';
+      cuadro.style.backgroundColor = 'green';
+    });
+  </script>
+</body>
+</html>
